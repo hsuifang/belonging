@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, max-age=0, must-revalidate">
+  <meta http-equiv="pragma" content="no-cache" />
+  <link rel="stylesheet" href="assets/css/all.css">
+  <title>標題名稱</title>
+</head>
+
+<body class="bg-primary">
+  <div class="l-container">
+    <div class="l-header">
+      <img src="assets/img/bg-cloud.png" alt="" class="l-header__bg">
+      <img src="assets/img/logo-header.png" alt="" class="l-header__logo l-header__logo--down">
+    </div>
+
+    <div class="titleList pl-3 pr-3 pb-2">
+      <div class="titleList__img"><img src="assets/img/icon-ticket.png" alt=""></div>
+      <p class="titleList__name">我的專屬優惠券</p>
+    </div>
+
+    <ul class="tabs pl-2 pr-2">
+      <li class="tabs__item tabs__item--active" onclick="changeTabs('coupon-area', 1)">未使用</li>
+      <li class="tabs__item" onclick="changeTabs('ticket-used', 2)">已使用</li>
+    </ul>
+    <!---- 已使用 / ----->
+    <div class="js-ticketArea pb-3" id="coupon-area">
+      <a href="belongingDetail.html" class="imgList">
+        <img src="assets/img/sample.png" alt="列表圖片" class="imgList__img grid-4">
+        <div class="imgList__content grid-6">
+          <p class="fontSize-m">養樂多多多多 乙大罐</p>
+          <p class="fontSize-sm">兌換期限：2019-05-08</p>
+        </div>
+        <div class="imgList__status grid-2"><img src="assets/img/useless.png" alt="" class="hidden"></div>
+      </a>
+      <a href="belongingDetail.html" class="imgList">
+        <img src="assets/img/sample.png" alt="列表圖片" class="imgList__img grid-4">
+        <div class="imgList__content grid-6">
+          <p class="fontSize-m">養樂多多多多 乙大罐</p>
+          <p class="fontSize-sm">兌換期限：2019-05-08</p>
+        </div>
+        <div class="imgList__status grid-2"><img src="assets/img/useless.png" alt="" class="hidden"></div>
+      </a>
+    </div>
+    <!----  / 未使用列表 ----->
+    <div class="js-ticketArea hidden" id="ticket-used">
+      <a href="belongingDetail.html" class="imgList">
+        <img src="assets/img/sample.png" alt="列表圖片" class="imgList__img grid-4">
+        <div class="imgList__content grid-6">
+          <p class="fontSize-m">養樂多多多多 乙大罐</p>
+          <p class="fontSize-sm">兌換期限：2019-05-08</p>
+        </div>
+        <div class="imgList__status grid-2"><img src="assets/img/useless.png" alt="" class=""></div>
+      </a>
+    </div>
+    <p class="l-footer grid-12 fixed">逾期優惠券，將不會顯示在此優惠列表中</p>
+  </div>
+
+  <script src="assets/js/lib/jquery.min.js"></script>
+  <script>
+    function changeTabs(tabsName, id) {
+      // tabs
+      $('.tabs__item').css({
+        'background-color': '#fff',
+        'color': '#A3007D'
+      })
+
+      $(`.tabs__item:nth-of-type(${id})`).css({
+        "background-color": '#efefef',
+        'color': '#555'
+      })
+
+      // content
+      $('.js-ticketArea').css('display', 'none')
+      $(`#${tabsName}`).css('display', 'block')
+
+    }
+
+  </script>
+
+</body>
+
+</html>

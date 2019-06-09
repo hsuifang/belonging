@@ -1,0 +1,18 @@
+/*-------------------------------------*\
+   $tab
+   頁籤用途，會有一個active去表示現在頁籤位置
+\*-------------------------------------*/
+.tabs {
+    background: $white;
+    list-style: none;
+    @include flex(row, flex-start, center, nowrap);
+    &__item{
+        padding: 0.5rem 2rem;
+        border-radius: 5px 5px 0 0 ;
+        color: $primary;
+        &--active {
+            color: $text-main;
+            background: $default;
+        }
+    }
+}

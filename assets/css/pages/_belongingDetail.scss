@@ -1,0 +1,29 @@
+// 調整日期位置
+.p-top {
+    top: -10px;
+}
+
+// 用於資訊說明旁的圖示
+.p-decorationIcon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -1rem ;
+    &--top {
+        top: 0;
+    }
+    &--bottom {
+        bottom: 0;
+        width: 12px;
+        height: 12px;
+        left: -0.4rem;
+    }
+}
+
+// 調整barcode位置
+.p-barcode {
+	max-width: 340px;
+    max-height: 80px ;
+    @include translateX;
+    background: none !important;
+}

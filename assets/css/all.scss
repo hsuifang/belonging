@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+/************************************************************
+
+    Title: binding
+    Author: Ifang, Hsu
+    Date: 2019/03/27
+
+********************************************************************/
+
+// util 
+@import "utils/variable"; // 定義基本顏色
+@import "utils/mixin"; // mixin
+@import "utils/helpers";
+
+// reset
+@import "base/normalize";
+@import "base/reset"; // 基礎 html 設定
+
+// layout
+@import "layout/layout";
+
+// component
+@import "components/tabs";
+@import "components/btn";
+@import "components/list";
+
+
+
+
+// page 
+@import "pages/belongingDetail"

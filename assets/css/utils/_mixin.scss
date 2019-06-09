@@ -1,0 +1,43 @@
+@mixin flex($dir, $jus, $ali, $wrap) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $ali;
+    flex-wrap: $wrap;
+}
+@mixin translateX {
+    left: 50%;
+    transform: translateX(-50%) !important;
+}
+// shape
+@mixin circle ($w, $h, $radius) {
+    width: $w;
+    height: $h;
+    border-radius: $radius;
+}
+
+// grid
+@for $i from 1 through $grid-columns {
+    .grid-#{$i} {
+      width: percentage($i / $grid-columns)
+    }
+}
+
+// media query
+@mixin pad {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile-normal {
+    @media (max-width: 414px) {
+        @content;
+    }
+}
+
+@mixin mobile-i5 {
+    @media (max-width: 320px) {
+        @content;
+    }
+}

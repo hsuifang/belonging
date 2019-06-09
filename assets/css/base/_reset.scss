@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', '微軟正黑體', 'arial'
+}
+html {
+    @include pad {
+        font-size: 14px;
+    }
+    @include mobile-normal {
+        font-size: 13px;
+    }
+    @include mobile-i5 {
+        font-size: 11px;
+    }
+}
+html, body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+h1, h2 {
+    font-weight: normal;
+}
+h1{font-size: $fontSize-sm * 2.25}
+h2{font-size: $fontSize-sm * 1.75}
+p{font-size: $fontSize-m; color: $text-main; word-wrap: break-word;}
+// base
+a{
+    text-decoration: none;
+    color: $text-main;
+    cursor: pointer;
+    &:active{
+        opacity: 0.9;
+    }
+}
+option {
+    color: $text-main;
+}
+button, select, input {
+    outline: none;
+}
+img {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+}
+input:disabled{
+    background: #eee !important;
+}

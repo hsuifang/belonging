@@ -1,0 +1,54 @@
+// titleList
+.titleList {
+    background: $white;
+    @include flex(row, flex-start, center, nowrap);
+    &__img {
+        padding: $spacer-1;
+        background: $primary;
+        @include circle(4rem, 4rem, 50%);
+    }
+    &__name{
+        width: 80%;
+        padding: 0.8rem;
+        border-bottom: 4px dotted $default;
+    }
+}
+// imgList | 用途有票券
+
+.imgList{
+    @include flex(row, flex-start, center, nowrap);
+    border-bottom: 3px dotted $white;
+    &__img{
+        border-radius: 10px;
+        padding: $spacer-2;
+        width: 30%;
+    }
+    &__content{
+        width: 50%;
+        padding-left: $spacer-1;             
+        margin-bottom: 2px;
+    }
+    &__status {
+        width: 20%;
+        img {
+            width: 80%;
+            margin: auto;
+        }
+    }
+}
+
+
+// infoList | 資訊告知
+.infoList {
+    border-left: 2px dashed $primary;
+    padding: 0 2rem;
+    &__title {
+        border-bottom: 2px solid $white;
+        padding: 0.6rem 0;
+        font-size: 1.2rem;
+    }
+    &__text {
+        padding-top: 0.2rem;
+        line-height: 1.4;
+    }
+}
